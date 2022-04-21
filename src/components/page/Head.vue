@@ -10,10 +10,10 @@
       <span>theme</span>
     </div>
     <ul ref="navmenu" class="nav-menu">
-      <li><router-link to="">个人页</router-link></li>
-      <li><router-link to="">喜好廊</router-link></li>
-      <li><router-link to="">随手记</router-link></li>
-      <li><router-link to="">留言墙</router-link></li>
+      <li><span @click="gomenu">个人页</span></li>
+      <li><span @click="gomenu">喜好廊</span></li>
+      <li><span @click="gomenu">随手记</span></li>
+      <li><span @click="gomenu">留言墙</span></li>
     </ul>
     <div @click="tox" ref="ttx" class="title">
       <div class="firsth"></div>
@@ -34,6 +34,9 @@ export default {
       let menus = this.$refs.navmenu
       titles.classList.toggle('active')
       menus.classList.toggle('open')
+    },
+    gomenu (option) {
+      console.log('option', option)
     }
   }
 }
